@@ -1,4 +1,4 @@
-import urllib.request, json, tweepy, os
+import urllib.request, json, tweepy
 
 tweet = ""
 
