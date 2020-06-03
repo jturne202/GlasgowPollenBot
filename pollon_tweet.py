@@ -9,10 +9,10 @@ with urllib.request.urlopen("https://api.breezometer.com/pollen/v2/forecast/dail
     # Parse data and create tweet content
     for t, v in data["data"][0]["types"].items():
         if v["data_available"]:
-            line = v["display_name"] + ": " + v["index"]["category"] + "\n"
+            line = f'{v["display_name"]}: {v["index"]["category"]}\n'
             tweet += line
         else:
-            line = v["display_name"] + ": Assumed none"
+            line = f'{v["display_name"]}: Assumed none'
             tweet += line
 
 # Authenticate to Twitter
